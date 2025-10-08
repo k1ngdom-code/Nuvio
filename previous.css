@@ -1,0 +1,279 @@
+html, body{
+  margin:0;
+  padding: 0;
+  background: linear-gradient(135deg, #cabcbc 0%, #e4e8f0 100%);
+overflow-y: auto;
+font-family: Manrope;
+}
+
+.navbar{
+  z-index: 1;
+  font-family: Inter ;
+}
+
+.navbar{
+    border: 1px solid;
+    width: 70%;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 20px;
+    border-radius: 20px;
+    color: whi;
+ background: rgba(255,255,255,0.3);
+  border:1px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0px 1px 12px rgba(0,0,0,0.1);
+    position: fixed;
+    backdrop-filter:blur(20px);
+    position: absolute;
+}
+
+.navbox{
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+
+.navbar ul{
+    display: flex;
+    //margin-right: -100px;
+    font-family: Inter;
+    font-size: 15px;
+    margin-left: 50px
+}
+
+
+.navbar li{
+    display: block;
+    margin-right: 100px;
+
+}
+.navbar li:hover{
+    cursor:pointer
+}
+
+
+.navbar div{
+    margin-right: 15%;
+    font-family: Lato;
+}
+
+#posts{
+  list-style: none;
+  width:80%;
+margin-top: 100px;
+margin-left: 10%;
+} 
+
+#posts li{
+  border: 1px solid;
+  width: 90%;
+  border-radius: 20px;
+  display: flex;
+  padding: 10px;
+  height: 13vh;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+background-color: rgba(255, 255, 255, 0.3);
+backdrop-filter: blur(10px);
+  padding-bottom: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+}
+
+.usersection{
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  border: 2px solid ;
+  width:16%;
+  height:4%;
+  align-items: center;
+  border-radius: 20px;
+   border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+background-color: rgba(255, 255, 255, 0.3);
+backdrop-filter: blur(10px);
+  overflow: hidden;
+  font-size: 13px;
+}
+
+.usersection p{
+  color: gray;
+  font-size: 15px;
+  position: absolute;
+  left: 3px;
+  
+}
+
+
+#posts .post-content{
+  margin-top: 45px;
+  width: 80%
+}
+
+#posts .date{
+ font-size: 17px;
+  margin-top: 75px;
+  background: rgba(255,255,255,0.5);
+  padding: 6px;
+  scale: 0.5;
+  border-radius: 15px;
+  backdrop-filter:blur(10px);
+  border: 1px solid rgba(255,255,255,0.6);
+  font-family: Inter;
+  margin-left: 80px;
+  height: 20px
+}
+
+.prev{
+  justify-content: center;
+  display: flex;
+  font-family: Manrope;
+}
+
+.previous-post-image{
+   height: 16%;
+    width: 9%;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 20px;
+    object-fit: cover;
+  margin-left: 60%;
+  display: flex;
+  position: absolute
+}
+
+@media (max-width:780px){
+ .navbar{
+  height: 4vh;
+ }
+ .navbar li{
+        margin-right: 55px;
+        font-size: 15px;
+    }
+       .navbar div{
+           margin-right:5%
+       }
+       .navbar ul{
+           margin-right: -70px
+       }
+  .previous-post-image{
+    height: 10%;
+    width: 12%;
+    margin-left: 60%;
+  }
+  
+  .post-content{
+ margin-top: 40px;
+    padding-top: 20px
+  }
+  .usersection{
+    height: 3vh;
+    font-size: 15px;
+    width: 30%;
+  }
+  #posts .date{
+    margin-top: 100px;
+margin-right: -1%;
+  }
+  #posts{
+    margin-left: 8%
+  }
+}
+@media (max-width:480px){
+  .post-content{
+    padding-top: 0px;
+    max-width: 70%;
+  }
+  .usersection{
+    height: 2vh;
+    font-size: 13px;
+    width: 30%;
+  }
+  #posts .date{
+    margin-top: 64px;
+
+scale: 0.45;
+  }
+
+  #posts{
+    margin-left: -2%;
+    width: 90%;
+  } 
+  #posts li{
+    height:8.5vh;
+  }
+  .previous-post-image{
+    height: 10%;
+    width: 20%;
+    margin-left: 60%;
+  }
+ .navbar{
+        width: 90%;
+        justify-content: center;
+        display: flex;
+      height:4vh;
+        position:fixed
+    }
+    .navbar li{
+        margin-right: 30px;
+        font-size: 10px;
+    }
+       .navbar div{
+           margin-right:8%
+       }
+       .navbar ul{
+           margin-right: -40px
+       }
+         
+}
+@media (max-width:430px){
+   .navbar div{
+margin-right: 0%;
+   }
+   .date{
+    margin-left:
+   }
+}
+@media (max-width:390px){
+   .navbar div{
+margin-right: -5%;
+   }
+   .previous-post-image{
+    width: 25%;
+    margin-left: 55%;
+   }
+}
+
+@media (max-width:380px){
+ .navbar li{
+        margin-right: 20px;
+        font-size: 10px;
+    }
+       .navbar div{
+           margin-right:0%
+       }
+    .navbar ul{
+        margin-right: -12px
+    }
+  }
+
+  @media (max-width:370px){
+    .navbar div{
+        margin-right: -10%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

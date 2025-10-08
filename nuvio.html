@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuvio</title>
+    <link rel="stylesheet" href="nuvio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400;1,700;1,900&family=Manrope:wght@200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!--Navigation bar-->
+    <nav class="navbar">
+        <div class="logo">
+            <h4>Nuvio</h4>
+        </div>
+        <ul id="navlist">
+            <li onclick="window.location.href='nuvio.html'">Home</li>
+            <li onclick="window.location.href='post.html'">Create post</li>
+            <li onclick="window.location.href='yourposts.html'">Your Posts</li>
+            <li><img src="spider-man-across.jpg" width="20px"></li>
+        </ul>
+    </nav>
+
+    <div class="header">
+        <div class="box-container">
+            <div class="hero">
+                <div class="box-card">
+                    <div class="face front"></div>
+                    <div class="face back"></div>
+                    <div class="face right"></div>
+                    <div class="face left"></div>
+                    <div class="face top"></div>
+                    <div class="face bottom"></div>
+
+                </div>
+                <div class="intro">
+                    <h1><span class="black"> Wel</span>come</h1>
+                    <h2><span class="black">Share Your </span> Thoughts</h2>
+                    <h3><span class="black">And Experi</span>ences</h3>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <div id="recent">
+        <p class='recent'>Top posts</p>
+
+    </div>
+
+    <p class="seemore">See more</p>
+    <!--Lets create the cards-->
+ 
+    <div class="container" id="cont">
+         <p style="display: none;" id="loading">Loading...</p>  
+        <!--<div class="card">
+            <img src="spider-man-across.jpg" width="400px">
+            <div class="cardtext">
+                <h3>Post title</h3>
+                <p>post content ppppppppppppppppppppppppppppp</p>
+            </div>
+            <div class="timestamp">
+                <span id="dot"></span>
+                <p2><span class="time">1</span> mins ago</p2>
+            </div>
+        </div>
+        <div class="card">
+            <img src="spider-man-across.jpg" width="400px">
+            <div class="cardtext">
+                <h3>Post title</h3>
+                <p>post content ppppppppppppppppppppppppppppp</p>
+            </div>
+            <div class="timestamp">
+                <span id="dot">x</span>
+                <p2><span class="time">1</span> mins ago</p2>
+            </div>
+        </div>
+        <div class="card">
+            <img src="spider-man-across.jpg" width="400px">
+            <div class="cardtext">
+                <h3>Post title</h3>
+                <p>post content ppppppppppppppppppppppppppppp</p>
+            </div>
+            <div class="timestamp">
+                <span id="dot"></span>
+                <p2><span class="time">1</span> mins ago</p2>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="spider-man-across.jpg" width="400px">
+            <div class="cardtext">
+                <h3>Post title</h3>
+                <p>post content ppppppppppppppppppppppppppppp</p>
+            </div>
+            <div class="timestamp">
+                <span id="dot"></span>
+                <p2><span class="time">1</span> mins ago</p2>
+            </div>
+        </div>
+
+         <div class="card">
+             <img src="spider-man-across.jpg" width="400px">
+             <div class="cardtext">
+                <h3>Post title</h3>
+                <p>post content ppppppppppppppppppppppppppppp</p>
+             </div>
+             <div class="timestamp">
+                <span id="dot"></span>
+                <p2><span class="time">1</span> mins ago</p2>
+             </div>
+             </div>
+
+         <div class="card">
+            <img src="spider-man-across.jpg" width="400px">
+            <div class="cardtext">
+                <h3>Post title</h3>
+                <p>post content ppppppppppppppppppppppppppppp</p>
+            </div>
+            <div class="timestamp">
+                <span id="dot"></span>
+                <p2><span class="time">1</span> mins ago</p2>
+             </div>
+        </div>-->
+
+    </div> 
+
+
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-analytics.js";
+        import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-database.js";
+        const firebaseConfig = {
+            apiKey: "AIzaSyDT0wY3ZkDFz6PuQ9WJCA6qEazIj5cgzyQ",
+            authDomain: "nuvio-980f0.firebaseapp.com",
+            databaseURL: "https://nuvio-980f0-default-rtdb.firebaseio.com",
+            projectId: "nuvio-980f0",
+            storageBucket: "nuvio-980f0.firebasestorage.app",
+            messagingSenderId: "541962014793",
+            appId: "1:541962014793:web:7d236be5ec464433bcaf98",
+            measurementId: "G-TZYNRQKC0K"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const db = getDatabase(app)
+const loading= document.getElementById("loading")
+        const postsList = document.getElementById("cont")
+        window.addEventListener("DOMContentLoaded", async () => {
+try {
+    loading.style.display="block"
+     const snapshot = await get(ref(db, "posts"))
+     loading.style.display="none"
+            if (snapshot.exists()) {
+                const data = snapshot.val()
+
+                Object.values(data).forEach(post => {
+                    const postdiv = document.createElement("div")
+                    postdiv.classList = 'card'
+                    postdiv.innerHTML = `
+            <img src=${post.imagebase64} width="400px" style='background-image:url("spider-man-across.jpg");
+            object-fit:contain'>
+            <div class="cardtext">
+                <h3>${post.usernameInput}</h3>
+                <p>${post.postContentInput}</p>
+            </div>
+            <div class="timestamp">
+                <span id="dot"></span>
+                <p2><span class="time">${post.createdAt}</span></p2>
+             </div>
+
+            `
+                    postsList.appendChild(postdiv)
+                })
+            } 
+} catch (error) {
+    console.error(error)
+}
+
+           
+
+        })
+
+    </script>
+</body>
+
+</html>
