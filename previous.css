@@ -194,7 +194,8 @@ margin-right: -1%;
   #posts .date{
     margin-top: 60px;
 scale: 0.45;
-    width:55%
+    width:55%;
+    margin-right:-3%
   }
 
   #posts{
