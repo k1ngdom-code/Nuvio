@@ -325,17 +325,17 @@ font-family: Inter;
     position: absolute;
     margin-top: 700px;
     font-size: 20px;
-   left: 40px;
+   left: 20px;
     font-family: Lato;
     border-left: 3px solid black;
     height: 40px;
     justify-content: center;
     align-items: center;
-    padding-left: 5px;
+    padding-left: 3px;
 }
 .seemore{
     display: flex;
-    right: 50px;
+    right: 30px;
     position: absolute;
     margin-top: 700px;
     font-family: Lato
