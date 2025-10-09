@@ -6,10 +6,6 @@ overflow-y: auto;
 font-family: Manrope;
 }
 
-.navbar{
-  z-index: 1;
-  font-family: Inter ;
-}
 
 .navbar{
     border: 1px solid;
@@ -27,6 +23,8 @@ font-family: Manrope;
     position: fixed;
     backdrop-filter:blur(20px);
     position: absolute;
+  z-index:1;
+    font-family: Inter ;
 }
 
 .navbox{
