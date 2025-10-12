@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signin</title>
+    <style>
+        #signin{
+             width: 70%;
+    font-size: 15px;
+    padding: 4px;
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    transition: 0.3s ease;
+    font-family: Inter;
+    height: 40px;
+    transition: 0.3s ease;
+        }
+#signin:hover{
+    border:2px solid black;
+    color: black;
+    background-color: white;
+}
+
+        #successful-si{
+             margin-left: -60%;
+    margin-top: -1%;
+    font-size: 14px;
+    font-family: Inter;
+
+        }
+        @media (max-width:480px) {
+            #signin{
+height: 30px;
+    width: 85%;
+            }
+        }
+    </style>
+</head>
+<link rel="stylesheet" href="signin.css">
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Manrope:wght@200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=lock" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=visibility" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=check_circle" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=cancel" />
+<link rel="stylesheet" href="signup.css">
+
+<body>
+    
+
+<nav>
+    <div class="logo">
+        <p style="font-family: Audiowide;">Nuvio</p>
+    </div>
+
+    <button id="getstarted" onclick="window.location.href='signup.html'">Get Started</button>
+</nav>
+
+    <div class="box">
+<div class="signup-container">
+    <h3 style="font-family: Audiowide; font-size: 30px;">Nuvio</h3>
+    <p class="start">Welcome Back</p>
+    <label for="signup-email">Email Address </label>
+    <input type="text" id="signup-email" placeholder="test@gmail.com">
+    <label for="signup-password" class="psw">Password</label>
+    <input type="text" id="signup-password" placeholder="Enter password">
+    <p id="successful-si" style="display:none">Done</p>
+    <button id="signin">Login</button>
+
+
+    <p class="already">Don't have an account? <a href="signup.html">Sign Up</a></p>
+
+</div>
+</div>
+    <script type="module">
+        import { signInUser } from './auth.js'
+    
+        const signinbutton= document.getElementById("signin")
+        signinbutton.addEventListener("click", function(){
+            const signinEmail= document.getElementById("signin-email").value
+const signinPassword = document.getElementById("signin-password").value
+
+signInUser(signinEmail, signinPassword)
+        })
+
+    </script>
+</body>
+</html>
