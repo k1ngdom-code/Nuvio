@@ -1,26 +1,21 @@
 
- body{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-background: linear-gradient(135deg, #cabcbc 0%, #e4e8f0 100%);
-width: 100%;
-height: 100%;
-overflow-x: hidden;
-font-family: Manrope ;
+html, body{
+  margin:0;
+  padding: 0;
+  background: linear-gradient(135deg, #cabcbc 0%, #e4e8f0 100%);
+overflow-y: auto;
+font-family: Manrope;
 }
-
-html{
-width: 100%;
-height: 100%;
-overflow-x: hidden;
+.seemore{
+    cursor: pointer;
 }
 .box-container {
     display: flex;
     justify-content: center;
     align-items: center;
     transform-style: preserve-3d;
-    z-index: 0
+    z-index: 0;
+    margin-top: 30px;
 }
 
 .box-card {
@@ -174,18 +169,33 @@ border-top:1px solid rgba(255, 255, 255, 0.6);
   opacity: 1
 }
 
+.cardtext h3{
+    font-size: 15px;
+    background-color: rgba(255, 255, 255, 0.6);
+    width: fit-content;
+    padding: 2px;;
+    border-radius: 7px;
+    color: whitesmoke;
+}
+.cardtext p{
+    font-size: 14px;
+    
+}
 .container{
   display: grid;
   grid-template-columns: repeat(3,1fr);
   gap: 70px;
- margin-top: 1200px;
+ margin-top: 150px;
   background:rgba(255,255,255,0.3);
   padding: 50px;
   border-radius: 15px;
   border: 3px solid rgba(255,255,255,0.6);
     position: absolute;
     overflow: hidden;
-    scrollbar-width: none
+    scrollbar-width: none;
+    width: 90%;
+    margin-left: 1%;
+  
 }
 
 .card:hover{
@@ -238,10 +248,17 @@ border-top:1px solid rgba(255, 255, 255, 0.6);
       box-shadow: 0px 1px 12px rgba(0,0,0,0.1);
     position: fixed;
     backdrop-filter:blur(20px);
-font-family: Inter;
+    position: absolute;
+  z-index:1;
+    font-family: Inter ;
 }
 
-
+.navbox{
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
 
 
 .navbar ul{
@@ -264,9 +281,9 @@ font-family: Inter;
 
 
 .navbar div{
-    margin-right: 15%
+    margin-right: 15%;
+    font-family: Audiowide;
 }
-
 .header{
     display: flex;
     justify-content: center;
@@ -279,10 +296,11 @@ font-family: Inter;
     margin-top: 100px;
     border-radius: 20px;
     padding-bottom: 20px;
-    font-family: Lato;
+    font-family: Audiowide;
+    margin-left: 7%;
 }
 .hero{
-    margin-top: 00px;
+    margin-top: -60px;
     color: black
 }
 .hero .intro{
@@ -297,8 +315,16 @@ font-family: Inter;
 }
 
 .intro h1{
-    font-size: 50px;
-    font-family: Inter
+    font-size: 40px;
+    font-family:;
+    color: transparent;
+    -webkit-text-stroke: 1px black;
+
+}
+.intro h1 .black{
+color: transparent;
+    -webkit-text-stroke: 0.5px white;
+
 }
 .black{
     color: white
@@ -306,7 +332,7 @@ font-family: Inter;
 
 
 .intro h2{
-    width: 500px;
+    width: 550px;
     display: flex;
     justify-content: center;
     
@@ -323,12 +349,12 @@ font-family: Inter;
 #recent{
     display: flex;
     position: absolute;
-    margin-top: 700px;
+    margin-top: 100px;
     font-size: 20px;
    left: 20px;
     font-family: Lato;
     border-left: 3px solid black;
-    height: 40px;
+    height: 20px;
     justify-content: center;
     align-items: center;
     padding-left: 3px;
@@ -337,7 +363,7 @@ font-family: Inter;
     display: flex;
     right: 30px;
     position: absolute;
-    margin-top: 700px;
+    margin-top: 100px;
     font-family: Lato
 }
 .seemore span{
@@ -347,7 +373,7 @@ font-family: Inter;
 
 .post-box{
  position: absolute;
-   margin-top: -20px;
+   margin-top: 30px;
    display: flex;
     flex-direction: column;
     width: 40%;
@@ -358,6 +384,7 @@ background-color: rgba(255, 255, 255, 0.3);
 backdrop-filter: blur(10px);
 padding: 10px;
 font-family: Lato;
+margin-left: 30%;
 }
 
 .post-box #main-post{
@@ -423,39 +450,73 @@ gap: 10px;
 }
 
   .head{
-    margin-top: 0px;
-    position: absolute;
-    top: 50px;
+    margin-top: 100px;
     font-size: 20px;
     font-family: Inter;
+    justify-content: center;
+    align-items: center;
+    display: flex;
   }
+  #loading{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    margin-bottom: 0px;
+  }
+
+.profileinfo{
+   width: 13%;
+   display: flex;
+   flex-direction: column;
+   position: absolute;
+   justify-content: center;
+   height: fit-content;
+   border: 1px solid rgba(255, 255, 255, 0.3);
+   right: 14%;
+   z-index:1;
+   top: 8%;
+border-radius: 10px;
+background-color: whitesmoke;
+box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
+padding: 5px;
+transition: 0.2s ease;
+height: 5vh;
+font-size: 14px;
+scale: 0;
+}
+
+#img{
+    transform: translate(0px, -13px);
+}
+#usernameinfo{
+    transform: translate(0px,15px);
+}
+
+
    @media (max-width:780px) {
     .container{
           grid-template-columns: repeat(2,1fr);
     }
-    .navbar{
-        width: 80%;
-        justify-content: center;
-        display: flex;
-      height:4vh;
-        position:fixed
-    }
-    .navbar li{
-        margin-right: 60px;
+     .navbar{
+  height: 4vh;
+ }
+ .navbar li{
+        margin-right: 55px;
         font-size: 15px;
     }
        .navbar div{
-           margin-right:10%
+           margin-right:5%
        }
        .navbar ul{
            margin-right: -70px
        }
-       
     .header{
         width: 90%;
-        margin-top: -300px;
-        height: 40vh;
+        margin-top: 100px;
+        height: 50vh;
         padding-bottom: 0px;
+        margin-left: 5%;
        
     }
        .header h1{
@@ -465,30 +526,39 @@ gap: 10px;
            margin-right: 10px
        }
        .header h3 span{
-           margin-right: 10px
+           margin-right: 6px
        }
     .card{
-        width: 250px;
-        height: 160px;
+        width: 280px;
+        height: 170px;
         font-size: 15px;
         font-family: Inter;
+        object-fit: contain;
     }
     .container{
       width: 80%;
         gap:40px;
         scale: 0.95;
-        margin-top: 950px;
-    }
+        margin-top: 100px;
+        padding-left: 65px;
+  }
     .seemore{
         right:30px;
-        margin-top: 220px
+        margin-top: 80px
     }
        #recent{
-           margin-top: 200px
+           margin-top: 80px
        }
        .post-box{
-           margin-top: -400px;
-           width: 60%
+           margin-top: 30px;
+           width: 60%;
+           margin-left: 20%;
+       }
+
+       .profileinfo{
+        width: 18%;
+        right:1%;
+        font-size:13px;
        }
    }
 
@@ -517,10 +587,10 @@ gap: 10px;
        
     .header{
         width: 95%;
-        margin-top: -340px;
+        margin-top: 85px;
         height: 30vh;
         padding-bottom: 0px;
-        margin-right: 10px;
+        margin-left: 2%;
         word-spacing: -10px;
          background: linear-gradient(deg, black 50%, #d9d7d7 50% );
    
@@ -553,30 +623,31 @@ gap: 10px;
         font-family: Inter;
     }
     .container{
-      width: 75%;
+      width: 85%;
         gap:40px;
         scale: 0.95;
-        margin-top: 1500px;
+        margin-top: 35px;
         justify-content: center;
         align-items: center;
-        margin-right: 10px;
+        margin-left: 1%;
         padding: 30px
     }
     .seemore{
         right:15px;
-        margin-top: 05px;
+        margin-top: 45px;
         font-size: 14px;
         color: grey
     }
        #recent{
-           margin-top: -10px;
+           margin-top: 45px;
            font-size: 16px;
            font-family: Inter;
            height: 20px
        }
        .post-box{
-           margin-top: -420px;
-           width: 80%
+           margin-top: 30px;
+           width: 80%;
+           margin-left: 8%;
        }
        #preview{
            width: 20%;
@@ -585,32 +656,55 @@ gap: 10px;
            top: 30px
        }
        
+       .profileinfo{
+        width: fit-content;
+        right:4%;
+        font-size:13px;
+        height:3vh;
+        top: 8%;
+       }
+       .seemore img{
+        transform:translate(0px,-3px);
+       }
+       #loading{
+        margin-top: 150px;
+       }
+       #userIcon{
+        width: 15px;
+       }
    }
 
 @media (max-width:430px){
     .container{
-        margin-top: 1300px
+   width: 83%;    
     }
     .header{
         letter-spacing: -10px
     }
-    .navbar div{
-margin-right: 0%;
-    }
+     .navbar div{
+margin-right: -0.5%;
+   }
     .post-box{
         width: 80%;
-        margin-left: -1%;
+        margin-left: 7%;
     }
 }
 @media (max-width:390px){
     .container{
-        margin-top: 1200px
+      width: 82%; 
     } 
     .header h2{
-        letter-spacing: 12px
+        letter-spacing: 12px;
+        font-size:15px 
     }
     .navbar div{
            margin-right:-5%
+       }
+       .header h3{
+           font-size: 15px
+       }
+       .header h1{
+           font-size: 25px
        }
 }
 @media (max-width:380px){
@@ -624,7 +718,9 @@ margin-right: 0%;
     .navbar ul{
         margin-right: -12px
     }
-    
+    .container{
+        width: 80%;
+    }
 }
 
 @media (max-width:370px){
