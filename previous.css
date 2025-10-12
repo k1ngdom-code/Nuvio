@@ -87,8 +87,8 @@ backdrop-filter: blur(10px);
   flex-direction: row;
   position: absolute;
   border: 2px solid ;
-  width:16%;
-  height:4%;
+  width:20%;
+  height:15%;
   align-items: center;
   border-radius: 20px;
    border: 1px solid rgba(255, 255, 255, 0.6);
@@ -104,7 +104,7 @@ backdrop-filter: blur(10px);
   font-size: 15px;
   position: absolute;
   left: 3px;
-  
+  width: fit-content;
 }
 
 
@@ -137,12 +137,12 @@ backdrop-filter: blur(10px);
 }
 
 .previous-post-image{
-   height: 16%;
-    width: 9%;
+   height: 76%;
+    width: 10%;
     border: 2px solid rgba(255,255,255,0.5);
     border-radius: 20px;
     object-fit: cover;
-  margin-left: 60%;
+  margin-left: 85%;
   display: flex;
   position: absolute
 }
@@ -162,9 +162,10 @@ backdrop-filter: blur(10px);
            margin-right: -70px
        }
   .previous-post-image{
-    height: 10%;
-    width: 12%;
-    margin-left: 60%;
+    width: 25%;
+    object-fit: contain;
+    margin-left: 70%;
+    height: 87%;
   }
   
   .post-content{
@@ -174,31 +175,42 @@ backdrop-filter: blur(10px);
   .usersection{
     height: 3vh;
     font-size: 15px;
-    width: 30%;
+    width: ;
   }
   #posts .date{
     margin-top: 100px;
-margin-right: -1%;
+margin-left: 25%;
+width: 14%;
   }
   #posts{
-    margin-left: 8%
+    margin-left: -2%;
+    width: 100%;
+  }
+  #posts .post-content{
+    max-width: 60%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+  
   }
 }
 @media (max-width:480px){
   .post-content{
     padding-top: 0px;
     max-width: 70%;
+  height: 41%;
+  overflow-y: scroll;
+  scrollbar-width:none ;
   }
   .usersection{
-    height: 3vh;
+    height: 2.4vh;
     font-size: 13px;
-    width: 30%;
+   
   }
   #posts .date{
-    margin-top: 60px;
+    margin-top: 70px;
 scale: 0.45;
-    width:65%;
-    margin-right:-8%;
+    width:35%;
+    margin-right:-4%;
     
   }
 
@@ -210,9 +222,10 @@ scale: 0.45;
     height:8.5vh;
   }
   .previous-post-image{
-    height: 10%;
-    width: 20%;
-    margin-left: 60%;
+    height: 85%;
+    width: 25%;
+    margin-left: 70%;
+    object-fit: cover;
   }
  .navbar{
         width: 90%;
@@ -235,20 +248,25 @@ scale: 0.45;
 }
 @media (max-width:430px){
    .navbar div{
-margin-right: 0%;
+margin-right: -0.5%;
    }
    .date{
-    margin-left:
+    margin-left:5%
    }
+   .previous-post-image{
+    width: 30%;
+    margin-left: 65%;
+   }
+#posts{
+  width: 100%;
+  margin-left: -7%;
+}
 }
 @media (max-width:390px){
    .navbar div{
 margin-right: -5%;
    }
-   .previous-post-image{
-    width: 25%;
-    margin-left: 55%;
-   }
+   
 }
 
 @media (max-width:380px){
@@ -269,14 +287,3 @@ margin-right: -5%;
         margin-right: -10%;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
