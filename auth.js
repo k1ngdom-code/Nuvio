@@ -31,26 +31,25 @@ alert("Signed up")
    switch(error.code){
     case "auth/email-already-in-use":
     successMessage.innerHTML="Email has already been used"
-    successMessage.style.transform="translate(0px, -20px)"
+    successMessage.style.transform="translate(25px, -20px)"
    
     break;
 
     case 'auth/invalid email':
       successMessage.innerHTML="Invalid email"
-      successMessage.style.transform="translate(0px, -20px)"
+      successMessage.style.transform="translate(10px, -20px)"
    
       break
 
       case error:
         successMessage.innerHTML="Please try again"
-        successMessage.style.transform="translate(0px, -20px)"
+        successMessage.style.transform="translate(18px, -20px)"
    
    }
 
   
    successMessage.style.display="block"
    successMessage.style.color="red"
-   successMessage.style.transform="translate(0px, -20px)"
    
    }
 }
@@ -77,6 +76,7 @@ signinSuccess.innerHTML="Failed to signin."
 signinSuccess.style.marginLeft="-55%"
 }
 }
+
 
 
 
