@@ -7,7 +7,8 @@ import {set, ref} from "https://www.gstatic.com/firebasejs/12.3.0/firebase-datab
 export async function signUpUser(username, email, password) {
    
     const successMessage = document.getElementById("successful-su")
-    
+    successMessage.innerHTML = "Signing up..."
+    successMessage.style.display="block"
    try {
      const userCredentials= await createUserWithEmailAndPassword(auth, email, password)
      console.log(userCredentials)
@@ -19,10 +20,10 @@ Email: email,
 Username:username,
      })
      
-     
+      successMessage.innerHTML = "Signed up!. Redirecting..."
      successMessage.style.display="block"
      successMessage.style.color="green"
-
+alert("Signed up")
      window.location.href="signin.html"     
    } catch (error) {
     console.error(error);
@@ -76,3 +77,4 @@ signinSuccess.innerHTML="Failed to signin."
 signinSuccess.style.marginLeft="-55%"
 }
 }
+
