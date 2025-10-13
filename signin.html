@@ -29,7 +29,8 @@
     margin-top: -1%;
     font-size: 14px;
     font-family: Inter;
-
+color: green;
+font-weight: 600;
         }
         @media (max-width:480px) {
             #signin{
@@ -66,7 +67,7 @@ height: 30px;
     <input type="text" id="signup-email" placeholder="test@gmail.com">
     <label for="signup-password" class="psw">Password</label>
     <input type="text" id="signup-password" placeholder="Enter password">
-    <p id="successful-si" style="display:none">Done</p>
+    <p id="successful-si" style="display:none;">You're In!!</p>
     <button id="signin">Login</button>
 
 
@@ -79,8 +80,8 @@ height: 30px;
     
         const signinbutton= document.getElementById("signin")
         signinbutton.addEventListener("click", function(){
-            const signinEmail= document.getElementById("signin-email").value
-const signinPassword = document.getElementById("signin-password").value
+            const signinEmail= document.getElementById("signup-email").value
+const signinPassword = document.getElementById("signup-password").value
 
 signInUser(signinEmail, signinPassword)
         })
