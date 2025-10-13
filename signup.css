@@ -204,10 +204,10 @@ nav{
 
 @media (max-width:430px){
 .logo{
-    margin-top: -1%;
+    margin-top: -3%;
 }
 #getstarted{
-    top: 12px;
+    top: 8px;
 }
 }
 
@@ -216,3 +216,4 @@ h3{
     font-size: 20px;
 }
 }
+
