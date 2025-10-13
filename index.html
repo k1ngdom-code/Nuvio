@@ -128,12 +128,12 @@
     </div>
      <div class="profileinfo" id="ui">
         
-        <p id="usernameinfo">okohm256@gmail.com</p>
-    <p id="img" style="color: red;">Log out<img src="chevron.png" style="transform: translate(0px, 3px);" width="15px"></p> 
+        <p id="usernameinfo"></p>
+    <p id="img" style="color: red; cursor:pointer">Log out<img src="chevron.png" style="transform: translate(0px, 3px);" width="15px"></p> 
       
     </div>
 
-    <div class="header" id="heading">
+    <div class="header" id="heading" onclick="close()">
         <div class="box-container">
             <div class="hero">
                 <div class="box-card">
@@ -165,7 +165,7 @@
 
     </div>
 
-    <p class="seemore">See more <img src="chevron.png" style="margin-top: 3px;" width="15px"></p>
+    <p class="seemore" onclick="alert('Coming soon!!')">See more <img src="chevron.png" style="margin-top: 3px;" width="15px"></p>
     <div id="loading"><div class="loader"></div></div>  
        
     <div class="container" id="cont">
@@ -259,7 +259,7 @@
 
     <script type="module">
         
-      // import { db } from './firebaseConfig'
+       //import { db } from './firebaseConfig'
   import { get,ref } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-database.js";
  import { app, db } from "./firebaseConfig.js"      
   
@@ -301,19 +301,7 @@ try {
         })
 
 </script>
-<script type="module" src="authState.js"></script>
-<script>
-    const userIcon= document.getElementById("userIcon")
-const userInfo= document.getElementById("ui")
-
-userIcon.addEventListener("mouseover",()=>{
-    userInfo.style.scale="1" 
-})
-const navbar= document.querySelector("nav")
-userIcon.addEventListener("mouseleave",function(){
-     userInfo.style.scale="0"
-})   
-</script>
+<script src="profile.js"></script>
 </body>
 
 </html>
