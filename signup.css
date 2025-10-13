@@ -129,7 +129,7 @@ font-weight: 100;
 }
 
 #successful-su{
-    margin-left: -60%;
+    margin-left: -55%;
     margin-top: -1%;
     font-size: 14px;
     font-family: Inter;
@@ -165,8 +165,8 @@ label{
     transform: translate(0px, 20px);
 }
 #getstarted{
-    height: 37px;
-    top: 7px;
+    height: 35px;
+    top: 8px;
     right: 20px;
     padding: 10px;
 }
@@ -184,6 +184,30 @@ input{
 #signup{
     height: 30px;
     width: 85%;
+}
+
+nav{
+    width: 80%;
+    margin-left:10%;
+}
+
+.logo{
+    margin-top: -2%;
+}
+.box{
+    margin-bottom: 20px;
+}
+.signup-container{
+    height: 70vh;
+}
+}
+
+@media (max-width:430px){
+.logo{
+    margin-top: -1%;
+}
+#getstarted{
+    top: 12px;
 }
 }
 
