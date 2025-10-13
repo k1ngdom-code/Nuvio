@@ -19,7 +19,7 @@ export async function signUpUser(username, email, password) {
 Email: email,
 Username:username,
      })
-     
+     successMessage.style.transform="translate(25px, 0px)"
       successMessage.innerHTML = "Signed up!. Redirecting..."
      successMessage.style.display="block"
      successMessage.style.color="green"
@@ -68,7 +68,7 @@ try {
 
 signinSuccess.innerHTML="You're in!!"
 signinSuccess.style.color="green"
-window.location.href="nuvio.html"
+window.location.href="index.html"
 
 } catch (error) {
 
@@ -77,5 +77,6 @@ signinSuccess.innerHTML="Failed to signin."
 signinSuccess.style.marginLeft="-55%"
 }
 }
+
 
 
