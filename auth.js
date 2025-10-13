@@ -14,39 +14,65 @@ export async function signUpUser(username, email, password) {
 
      const user= userCredentials.user
 
-     await set(ref(db, "/users" + user.uid),{
+     await set(ref(db, "./users" + user.uid),{
 Email: email,
 Username:username,
-UserId: user.uid,
      })
      
      
      successMessage.style.display="block"
-   
+     successMessage.style.color="green"
+
      window.location.href="signin.html"     
    } catch (error) {
     console.error(error);
-   successMessage.innerHTML="Please try again"
+
+   switch(error.code){
+    case "auth/email-already-in-use":
+    successMessage.innerHTML="Email has already been used"
+    successMessage.style.transform="translate(0px, -20px)"
+   
+    break;
+
+    case 'auth/invalid email':
+      successMessage.innerHTML="Invalid email"
+      successMessage.style.transform="translate(0px, -20px)"
+   
+      break
+
+      case error:
+        successMessage.innerHTML="Please try again"
+        successMessage.style.transform="translate(0px, -20px)"
+   
+   }
+
+  
    successMessage.style.display="block"
    successMessage.style.color="red"
-   successMessage.style.transform="translate(20px, -20px)"
+   successMessage.style.transform="translate(0px, -20px)"
+   
    }
 }
 
 
 export async function signInUser(email, password) {
 const signinSuccess = document.getElementById("successful-si")
-
+signinSuccess.innerHTML='Signing in...'
+signinSuccess.style.color="black"
+signinSuccess.style.display="block"
 
 
 try {
  const userCredentials = await signInWithEmailAndPassword(auth, email, password)
 
-alert("Successful signin")
-window.location.href="index.html"
-signinSuccess.style.display="block"
+signinSuccess.innerHTML="You're in!!"
+signinSuccess.style.color="green"
+window.location.href="nuvio.html"
 
 } catch (error) {
-    alert(error + ". Failed to signin")
+
+    signinSuccess.style.color="red"
+signinSuccess.innerHTML="Failed to signin."
+signinSuccess.style.marginLeft="-55%"
 }
 }
