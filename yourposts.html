@@ -11,6 +11,53 @@
 <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Manrope:wght@200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="previous.css">
 
+
+    <style>
+.profileinfo{
+   width: 13%;
+   display: flex;
+   flex-direction: column;
+   position: absolute;
+   justify-content: center;
+   height: fit-content;
+   border: 1px solid rgba(255, 255, 255, 0.3);
+   right: 14%;
+   z-index:1;
+   top: 8%;
+border-radius: 10px;
+background-color: whitesmoke;
+box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
+padding: 5px;
+transition: 0.2s ease;
+height: 5vh;
+font-size: 14px;
+scale: 0;
+}
+
+#img{
+    transform: translate(0px, -13px);
+}
+#usernameinfo{
+    transform: translate(0px,15px);
+}
+@media (max-width:780px){
+     .profileinfo{
+        width: 18%;
+        right:1%;
+        font-size:13px;
+       }
+}
+
+@media (max-width:480px){
+    .profileinfo{
+        width: fit-content;
+        right:4%;
+        font-size:13px;
+        height:3vh;
+        top: 8%;
+       }
+    }
+    </style>
 </head>
 
 <body>
@@ -22,13 +69,22 @@
             </div>
             <ul id="navlist">
                 <li onclick="window.location.href='index.html'">Home</li>
-                <li onclick="window.location.href='post.html'">Create post</li>
+                <li onclick="window.location.href='post.html'">Create </li>
                 <li onclick="window.location.href='yourposts.html'">Your Posts</li>
-                <li><img src="spider-man-across.jpg" width="20px"></li>
+            <li><img src="user.png" width="20px" style="display: block;
+            cursor: pointer;" id="userIcon"></li>    
             </ul>
         </nav>
     </div>
-    <ul id="posts">
+    
+    <div class="profileinfo" id="ui">
+        
+        <p id="usernameinfo">okohm256@gmail.com</p>
+    <p id="img" style="color: red;">Log out<img src="chevron.png" style="transform: translate(0px, 3px);" width="15px"></p> 
+      
+    </div>
+
+    <ul id="posts" onclick="close()">
        
     </ul>
 
@@ -60,9 +116,10 @@
         loadPosts()
 
     </script>
+    <script type="module" src="authState.js"></script>
+    <script src="profile.js"></script>
 </body>
 
 
 </html>
-
 
