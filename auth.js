@@ -15,7 +15,7 @@ export async function signUpUser(username, email, password) {
 
      const user= userCredentials.user
 
-     await set(ref(db, "./users" + user.uid),{
+     await set(ref(db, "/users" + user.uid),{
 Email: email,
 Username:username,
      })
@@ -77,4 +77,5 @@ signinSuccess.innerHTML="Failed to signin."
 signinSuccess.style.marginLeft="-55%"
 }
 }
+
 
