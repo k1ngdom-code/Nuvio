@@ -14,6 +14,53 @@
         background: linear-gradient(135deg, #cabcbc 0%, #e4e8f0 100%);
 
     }
+
+    .profileinfo{
+   width: 13%;
+   display: flex;
+   flex-direction: column;
+   position: absolute;
+   justify-content: center;
+   height: fit-content;
+   border: 1px solid rgba(255, 255, 255, 0.3);
+   right: 14%;
+   z-index:1;
+   top: 8%;
+border-radius: 10px;
+background-color: whitesmoke;
+box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
+padding: 5px;
+transition: 0.2s ease;
+height: 5vh;
+font-size: 14px;
+scale: 0;
+}
+
+#img{
+    transform: translate(0px, -13px);
+}
+#usernameinfo{
+    transform: translate(0px,15px);
+}
+@media (max-width:780px){
+     .profileinfo{
+        width: 18%;
+        right:1%;
+        font-size:13px;
+       }
+}
+
+@media (max-width:480px){
+    .profileinfo{
+        width: fit-content;
+        right:4%;
+        font-size:13px;
+        height:3vh;
+        top: 8%;
+       }
+}
+
+
 </style>
 </head>
 
@@ -28,9 +75,17 @@
                 <li onclick="window.location.href='nuvio.html'">Home</li>
                 <li onclick="window.location.href='post.html'">Create </li>
                 <li onclick="window.location.href='yourposts.html'">Your Posts</li>
-            <li><img src="spider-man-across.jpg" width="30px"></li>    
+            <li><img src="user.png" width="20px" style="display: block;
+            cursor: pointer;" id="userIcon"></li>    
             </ul>
         </nav>
+    </div>
+
+    <div class="profileinfo" id="ui">
+        
+        <p id="usernameinfo">okohm256@gmail.com</p>
+    <p id="img" style="color: red;">Log out<img src="chevron.png" style="transform: translate(0px, 3px);" width="15px"></p> 
+      
     </div>
 
     <p2 class="head" >Create Post</p2>
@@ -93,9 +148,10 @@ try{
             })
 
         
-            alert("note added")
+            alert("Posted!!")
 }catch(error){
     console.error(error)
+    alert("Failed to post. Please check connectivity")
 }
         
         })
@@ -104,7 +160,9 @@ try{
 
     </script>
   <script src="nuvio.js" type="module"></script>
-</body>
+<script src="profile.js"></script>
+<script type="module" src="authState.js"></script>
+  </body>
 
 
 </html>
