@@ -462,7 +462,7 @@ gap: 10px;
     justify-content: center;
     align-items: center;
     margin-top: 200px;
-    margin-bottom: 0px;
+    margin-bottom: 50px;
   }
 
 .profileinfo{
@@ -588,7 +588,7 @@ scale: 0;
     .header{
         width: 95%;
         margin-top: 85px;
-        height: 30vh;
+        height: 33vh;
         padding-bottom: 0px;
         margin-left: 2%;
         word-spacing: -10px;
@@ -679,7 +679,7 @@ scale: 0;
    width: 83%;    
     }
     .header{
-        letter-spacing: -10px
+        letter-spacing: -15px
     }
      .navbar div{
 margin-right: -0.5%;
@@ -688,14 +688,17 @@ margin-right: -0.5%;
         width: 80%;
         margin-left: 7%;
     }
+    .header h2{
+       font-size: 14.5px;
+    }
 }
 @media (max-width:390px){
     .container{
       width: 82%; 
     } 
     .header h2{
-        letter-spacing: 12px;
-        font-size:15px 
+        letter-spacing: 10px;
+        font-size:14px 
     }
     .navbar div{
            margin-right:-5%
@@ -709,7 +712,7 @@ margin-right: -0.5%;
 }
 @media (max-width:380px){
      .navbar li{
-        margin-right: 20px;
+        margin-right: 19px;
         font-size: 10px;
     }
        .navbar div{
