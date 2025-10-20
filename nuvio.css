@@ -2,7 +2,7 @@
 html, body{
   margin:0;
   padding: 0;
-  background: linear-gradient(135deg, #cabcbc 0%, #e4e8f0 100%);
+  background: linear-gradient(135deg, #e6dede 0%, #e4e8f0 100%);
 overflow-y: auto;
 font-family: Manrope;
 }
@@ -123,59 +123,61 @@ opacity: 0.4
 
 .card{
   position: relative;
-  width: 350px;
-  height: 260px;
+  width: 320px;
+  height: 350px;
   overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px;
+  border-radius: 15px;
   cursor: pointer;
   transition: 0.3s ease;
-  transform-style: preserve-3d
+  transform-style: preserve-3d;
+  background-color: whitesmoke;
+padding: 0px;
+box-shadow: 0px 3px 20px rgba(0,0,0,0.1)
 }
 
-.card img{
+.card .userpost{
   width: 100%;
-  height: 100%;
+  height: 60%;
   object-fit: cover;
   display: block;
   transition: 0.2s ease;
-  box-shadow: inset 0px 4px 20px
+  box-shadow: inset 0px 4px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //transform: translate(8%,10%);
+ 
 }
 .cardtext{
   position: absolute;
   bottom: 0;
   left: 0;
-  color: white;
+  color: black;
   padding: 10px;
   height: 100%;
   box-sizing: border-box;
-  transform: translateY(70%);
+  transform: translateY(55%);
   transition:transform 0.3s ease, opacity 0.3s ease;
   border-radius: 20px;
-  background:rgba(0,0,0,0.6);
-border-radius: 10px;
+ border-radius: 10px;
  width: 100%;
-border-top:1px solid rgba(255, 255, 255, 0.6);
-  opacity: 0;
+//border-top:1px solid rgba(255, 255, 255, 0.6);
+  opacity: 1;
   font-family: Lato;
   
 }
-.card:hover .card img{
-  filter: brightness(0.5)
-}
 
-.card:hover .cardtext{
-  transform: translateY(0);
-  opacity: 1
-}
+
+
 
 .cardtext h3{
     font-size: 15px;
-    background-color: rgba(255, 255, 255, 0.6);
-    width: fit-content;
+     width: fit-content;
     padding: 2px;;
     border-radius: 7px;
-    color: whitesmoke;
+    color: black;
+    transform: translate(30%,35%);
+    color: purple;
 }
 .cardtext p{
     font-size: 14px;
@@ -186,10 +188,10 @@ border-top:1px solid rgba(255, 255, 255, 0.6);
   grid-template-columns: repeat(3,1fr);
   gap: 70px;
  margin-top: 150px;
-  background:rgba(255,255,255,0.3);
+  //background:rgba(255,255,255,0.3);
   padding: 50px;
-  border-radius: 15px;
-  border: 3px solid rgba(255,255,255,0.6);
+  //border-radius: 15px;
+  //border: 3px solid rgba(255,255,255,0.6);
     position: absolute;
     overflow: hidden;
     scrollbar-width: none;
@@ -198,28 +200,29 @@ border-top:1px solid rgba(255, 255, 255, 0.6);
   
 }
 
-.card:hover{
-  transform: translateZ(60px) scale(1.05);
-  box-shadow: 0px 20px 40px rgba(0,0,0,0.4)
+.card .userpost:hover{
+  transform: translateZ(10px) scale(1.05);
+ 
 }
 
 
-
+.userimage{
+    width: 20px;
+    position:absolute;
+    display: flex;
+    transform: translate(-20%,120%);
+}
 
 .timestamp{
   position: relative;
-  color: white;
-  margin-top: -30px;
+ margin-top: 30%;
   margin-left: 0px;
-  background: rgba(255,255,255,0.4);
-  width: 70px;
+   width: 70px;
   font-size: 13px;
-  padding:5px;
   border-radius: 10px;
   transform: scale(0.8);
-  padding-left: 19px;
-  border-top:1px solid rgba(255, 255, 255, 0.6);
-  font-family: Lato;
+   font-family: Lato;
+  color: rgb(95, 93, 93);
 }
 
 #dot{
@@ -266,14 +269,14 @@ border-top:1px solid rgba(255, 255, 255, 0.6);
     //margin-right: -100px;
     font-family: Inter;
     font-size: 15px;
-    margin-left: 50px
+    margin-left: 90px
 }
 
 
 .navbar li{
     display: block;
     margin-right: 100px;
-
+transform: translate(0px,15%);
 }
 .navbar li:hover{
     cursor:pointer
@@ -284,6 +287,13 @@ border-top:1px solid rgba(255, 255, 255, 0.6);
     margin-right: 15%;
     font-family: Audiowide;
 }
+
+.navbar li span{
+    transform: translate(20%,-10%);
+    position: absolute;
+}
+
+
 .header{
     display: flex;
     justify-content: center;
@@ -509,7 +519,7 @@ scale: 0;
            margin-right:5%
        }
        .navbar ul{
-           margin-right: -70px
+           margin-right: -50px
        }
     .header{
         width: 90%;
@@ -529,9 +539,7 @@ scale: 0;
            margin-right: 6px
        }
     .card{
-        width: 280px;
-        height: 170px;
-        font-size: 15px;
+       font-size: 15px;
         font-family: Inter;
         object-fit: contain;
     }
@@ -540,7 +548,7 @@ scale: 0;
         gap:40px;
         scale: 0.95;
         margin-top: 100px;
-        padding-left: 65px;
+        padding-left: 45px;
   }
     .seemore{
         right:30px;
@@ -582,7 +590,7 @@ scale: 0;
            margin-right:8%
        }
        .navbar ul{
-           margin-right: -40px
+           margin-right: -20px
        }
        
     .header{
@@ -683,7 +691,23 @@ scale: 0;
     }
      .navbar div{
 margin-right: -0.5%;
+display: none;
    }
+.navbar ul li{
+    visibility: hidden;
+    margin-right: 120%;
+    max-width: 100px;
+}
+.navbar li span{
+    transform: translate(20%,-10%);
+   visibility: visible;
+}
+.navbar ul{
+    margin-left: -95%;
+}
+.navbar{
+    height:5vh
+}
     .post-box{
         width: 80%;
         margin-left: 7%;
@@ -700,9 +724,22 @@ margin-right: -0.5%;
         letter-spacing: 10px;
         font-size:14px 
     }
-    .navbar div{
-           margin-right:-5%
-       }
+    
+.navbar ul li{
+    visibility: hidden;
+    margin-right: 110%;
+    max-width: 100px;
+}
+.navbar li span{
+    transform: translate(20%,-14%);
+   visibility: visible;
+}
+.navbar ul{
+    margin-left: -95%;
+}
+.navbar{
+    height:5vh
+}
        .header h3{
            font-size: 15px
        }
@@ -711,23 +748,37 @@ margin-right: -0.5%;
        }
 }
 @media (max-width:380px){
-     .navbar li{
-        margin-right: 19px;
-        font-size: 10px;
-    }
-       .navbar div{
-           margin-right:0%
-       }
-    .navbar ul{
-        margin-right: -12px
-    }
+    
+.navbar ul li{
+   margin-right: 115%;
+    max-width: 100px;
+}
+.navbar li span{
+    visibility: visible;
+}
+.navbar ul{
+    margin-left: -105%;
+}
+.navbar{
+    height:5vh
+}
     .container{
         width: 80%;
     }
+    .card{
+        height: 330px;
+    }
+   .timestamp{
+    margin-bottom: 20px;
+   }
 }
 
 @media (max-width:370px){
-    .navbar div{
-        margin-right: -10%;
-    }
+   .navbar ul{
+    margin-left: -107%;
+}
+.navbar ul li{
+   margin-right: 110%;
+    max-width: 100px;
+}
 }
