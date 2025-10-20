@@ -244,9 +244,10 @@ window.addEventListener("load", async () => {
  const backupimage= "user.png"
       Object.values(members).forEach(member =>{
         const li = document.createElement("li")
-        li.innerHTML=`
+       let image= member.ProfilepicSrc || backupimage
+          li.innerHTML=`
         <div class="user">
-                <img src="${member.ProfilepicSrc} || backupimage" width="30px" style="object-fit:cover" class="profilePic">
+                <img src= '${image}' width="30px" style="object-fit:cover" class="profilePic">
                 <p class="name">${member.Username}</p>
                 <p class="email">${member.Email}</p>
                <button class="contact"><a href="https://wa.me/${member.Phoneno}" style="text-decoration: none; color: white;">Contact</a><img src="phone-call.png" width="20px"></button>
@@ -282,6 +283,7 @@ toppers.forEach(topper =>{
 
 </body>
 </html>
+
 
 
 
