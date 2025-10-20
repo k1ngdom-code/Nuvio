@@ -1,0 +1,371 @@
+html, body{
+    margin:0;
+    padding:0
+}
+
+.one,.note, a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.one{
+    font-family: Audiowide;
+    font-weight: 600;
+margin-top: 50px;
+width: 100%;
+border-bottom: 4px solid rgba(255,255,255,0.5);
+margin-bottom: -4px;
+}
+.note{
+    letter-spacing: 2px;
+    font-family: Inter;
+    margin-bottom: -2px;
+    color: rgba(0,0,0,0.5);
+}
+a{
+    color: black;
+}
+
+
+.firstmembers{
+ background-color: rgb(233, 226, 226);
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    padding-bottom: 30px;
+    margin-left: 3%;
+    padding-right: 50px;
+    margin-top: 3%;
+    border-radius: 20px;
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.1);
+    height: 50vh;
+}
+.firstmembers h3{
+    font-family: Audiowide;
+    font-size: 25px;
+}
+#topuserlist{
+ display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(5,1fr);
+    gap:5%;
+    font-family: Inter ;
+    list-style: none;
+}
+
+#topuserlist li{
+    display: flex;
+    padding: 15px;
+    margin-right: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+height: 75%;
+width: 90%;
+border-radius: 20px;
+box-shadow: 0px 4px 20px rgba(0,0,0,0.5);
+background: rgba(255,255,255,0.3);
+  border:1px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0px 1px 12px rgba(0,0,0,0.1);
+  }
+
+  #topuserlist button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    width: 130%;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 2px;
+    font-family: Inter;
+    height: 15%;
+    bottom: 0;
+    transform: translate(0%,0%);
+    margin-left: -15%;
+  }
+  #topuserlist p{
+    margin-top: -5px;
+    margin-left: -5%;
+  }
+  #topuserlist button img{
+    background-color: white;
+    border-radius: 50%;
+    padding:4px;
+    scale: 0.7;
+    margin-left: 1px;
+  }
+  .profilePic{
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(17%,-30%);
+    z-index: 1;
+    border: 2px solid;
+    border-radius: 50%;
+    padding: 2px;
+  }
+
+
+  .othermembers{
+    display: flex;
+    flex-direction: column;
+  }
+
+
+.othermembers h3{
+    display: flex;
+    width:100%;
+    font-family: Audiowide;
+    font-size: 20px;
+    border-bottom: 3px solid rgba(0,0,0,0.5);
+    margin-top: 5%;
+    padding-left: 5px;
+}
+
+
+#otheruserslist{
+display:flex;
+flex-direction: column;
+
+}
+
+#otheruserslist li{
+    display: flex;
+    margin-bottom: 10px;
+    background-color: rgba(255,255,255,0.5);
+    backdrop-filter: blur(10px);
+    border: rgba(255,255,255,0.3);
+    border-radius: 20px;
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.1);
+width: 90%;
+transition: 0.2s ease;
+}
+#otheruserslist li:hover{
+    scale: 1.03;
+    cursor: pointer;
+}
+
+#otheruserslist .user{
+    display: flex;
+    justify-content: center;
+    
+}
+#otheruserslist .profilePic{
+    width: 70px;
+    display: flex;
+    margin-top: 15%;
+
+}
+#otheruserslist .name{
+    display: flex;
+    flex-direction: column;
+justify-content: center;
+width:  100%;
+transform: translate(15%,-10%);
+font-weight: 600;
+font-family: Inter ;
+}
+#otheruserslist .email{
+  
+ display: flex;
+    flex-direction: column;
+justify-content: center;
+width:  100%;
+transform: translate(-70%,20%);
+font-weight: 500;
+}
+
+#otheruserslist button{
+    height: 50%;
+    top: 20%;
+    position: absolute;
+    right:5%;
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    width: 15%;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 2px;
+    font-family: Inter;
+    height: 29%;
+    bottom: 0;
+    transform: translate(0%,50%)
+}
+
+
+#otheruserslist button img{
+    background-color: white;
+    margin-left: 3%;
+    border-radius: 50%;
+    padding: 2px;
+    font-weight: 600;
+}
+
+#topuserslist button:hover{
+    color: black;
+    background-color: white;
+    border: 2px solid rgba(0,0,0,0.1);
+}
+
+
+#loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+
+
+
+.usercard{
+    border: none;
+    width: 30%;
+    margin-top: 7%;
+    margin-left: 1%;
+    border-radius: 20px;
+    background-color: rgba(0,0,0,0.9);
+    color: white;
+    padding-left: 3%;
+    font-family: Inter;
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
+}
+.usercard button{
+    width: 90%;
+    background-color: whitesmoke;
+    padding:5px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    margin-top: 5%;
+}
+.usercard p{
+  margin-top: -5%;
+  padding: 2%;
+  font-weight: 600;
+}
+.usercard span{
+    font-weight: 500;
+}
+.usercard .profilePic{
+    background-color: rgba(255,255,255,0.95);
+}
+
+
+@media (max-width:780px){
+   #topuserlist{
+    grid-template-columns: repeat(3,1fr);
+    
+   }
+   .usercard{
+    margin-top: 15%;
+    width: 50%;
+    padding-bottom: 20px;
+   }
+
+   .one{
+    margin-top: 12%;
+    font-size: 22px;
+   }
+   .firstmembers{
+    margin-top: 10%;
+    height: 67vh;
+   }
+   .firstmembers h3{
+    font-size: 25px;
+    padding-bottom: 30px;
+   }
+   #topuserlist button img{
+    margin-top: -2px;
+   }
+   #topuserlist li{
+    height: 80%;
+   }
+}
+
+@media (max-width:480px) {
+ .usercard{
+    margin-top: 20%;
+    width: 90%;
+ }  
+
+
+  #topuserlist{
+    grid-template-columns: repeat(1,1fr);
+    gap: 60px;
+margin-top: 120%;
+margin-left: -24%;
+
+   }
+
+#topuserlist li{
+    width: 140%;
+    height: 105%;
+}
+.firstmembers{
+    height: 95vh;
+    overflow-y: hidden;
+    margin-left: 2%;
+    width: 85%;
+    scrollbar-width:none ;
+    overflow: auto scroll;
+    padding-top: 10px;
+}
+.usercard button{
+margin-left: 2%;    
+}
+.note{
+    padding-bottom: 10px;
+}
+#otheruserslist li{
+    width: 100%;
+    margin-left: -5%;
+}
+#otheruserslist .profilePic{
+    width: 60px;
+}
+#otheruserslist button{
+    width: 21%;
+    top: 22%;
+}
+
+}
+
+
+
+@media (max-width:430px){
+    .firstmembers{
+        height: 110vh;
+    }
+
+    .usercard{
+        margin-top: 30%;
+    }
+}
+
+@media (max-width:420px){
+    #topuserlist{
+        margin-left: -30%;
+    }
+}
+@media (max-width:370px){
+    #topuserlist{
+        margin-left: -34%;
+    }
+    .usercard{
+        margin-top: 33%;
+    }
+}

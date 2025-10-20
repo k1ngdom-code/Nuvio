@@ -1,0 +1,169 @@
+.navbar{
+    border: 1px solid;
+    width: 70%;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 20px;
+    border-radius: 20px;
+    color: whi;
+ background: rgba(255,255,255,0.3);
+  border:1px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0px 1px 12px rgba(0,0,0,0.1);
+    position: fixed;
+    backdrop-filter:blur(20px);
+    position: absolute;
+  z-index:1;
+    font-family: Inter ;
+}
+
+.navbox{
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+
+.navbar ul{
+    display: flex;
+    //margin-right: -100px;
+    font-family: Inter;
+    font-size: 15px;
+    margin-left: 90px
+}
+
+
+.navbar li{
+    display: block;
+    margin-right: 100px;
+transform: translate(0px,15%);
+}
+.navbar li:hover{
+    cursor:pointer
+}
+
+
+.navbar div{
+    margin-right: 15%;
+    font-family: Audiowide;
+}
+
+.navbar li span{
+    transform: translate(20%,-10%);
+    position: absolute;
+}
+
+
+
+@media (max-width:780px){
+     .navbar{
+  height: 4vh;
+ }
+ .navbar li{
+        margin-right: 55px;
+        font-size: 15px;
+    }
+       .navbar div{
+           margin-right:5%
+       }
+       .navbar ul{
+           margin-right: -50px
+       }
+}
+
+
+   @media (max-width:480px){
+   
+        .navbar{
+        width: 90%;
+        justify-content: center;
+        display: flex;
+      height:4vh;
+        position:fixed
+    }
+    .navbar li{
+        margin-right: 30px;
+        font-size: 10px;
+    }
+       .navbar div{
+           margin-right:8%
+       }
+       .navbar ul{
+           margin-right: -20px
+       }    
+   }
+
+
+
+
+@media (max-width:430px){
+   
+     .navbar div{
+margin-right: -0.5%;
+display: none;
+   }
+.navbar ul li{
+    visibility: hidden;
+    margin-right: 120%;
+    max-width: 100px;
+}
+.navbar li span{
+    transform: translate(20%,-10%);
+   visibility: visible;
+}
+.navbar ul{
+    margin-left: -95%;
+}
+.navbar{
+    height:5vh
+}
+}
+
+
+
+@media (max-width:390px){
+.navbar ul li{
+    visibility: hidden;
+    margin-right: 110%;
+    max-width: 100px;
+}
+.navbar li span{
+    transform: translate(20%,-14%);
+   visibility: visible;
+}
+.navbar ul{
+    margin-left: -95%;
+}
+.navbar{
+    height:5vh
+}
+       
+}
+@media (max-width:380px){
+    
+.navbar ul li{
+   margin-right: 115%;
+    max-width: 100px;
+}
+.navbar li span{
+    visibility: visible;
+}
+.navbar ul{
+    margin-left: -105%;
+}
+.navbar{
+    height:5vh
+}
+}
+
+@media (max-width:370px){
+   .navbar ul{
+    margin-left: -107%;
+}
+.navbar ul li{
+   margin-right: 110%;
+    max-width: 100px;
+}
+}
