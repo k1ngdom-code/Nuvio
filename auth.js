@@ -19,7 +19,7 @@ export async function signUpUser(username,dob , profilepicimage , city , phoneno
 Email: email,
 Username:username,
 Userid: user.uid,
-ProfilepicSrc: profilepicimage,
+ProfilepicSrc: localStorage.getItem("profilepic"),
 Dateofbirth: dob,
 City : city
      })
@@ -84,4 +84,5 @@ signinSuccess.innerHTML="Failed to signin."
 signinSuccess.style.marginLeft="-55%"
 }
 }
+
 
