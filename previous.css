@@ -247,12 +247,14 @@ scale: 0.45;
          
 }
 @media (max-width:430px){
-   .navbar div{
-margin-right: -0.5%;
-   }
-   .date{
-    margin-left:5%
-   }
+   
+    #posts .date{
+    margin-top: 70px;
+scale: 0.45;
+    width:40%;
+    margin-right:-4%;
+    
+  }
    .previous-post-image{
     width: 30%;
     margin-left: 65%;
@@ -262,28 +264,4 @@ margin-right: -0.5%;
   margin-left: -7%;
 }
 }
-@media (max-width:390px){
-   .navbar div{
-margin-right: -5%;
-   }
-   
-}
 
-@media (max-width:380px){
- .navbar li{
-        margin-right: 19px;
-        font-size: 10px;
-    }
-       .navbar div{
-           margin-right:0%
-       }
-    .navbar ul{
-        margin-right: -12px
-    }
-  }
-
-  @media (max-width:370px){
-    .navbar div{
-        margin-right: -10%;
-    }
-}
