@@ -55,8 +55,8 @@ nav button{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 90px;
-height: 80vh;
+    margin-top: 100px;
+height: 130vh;
 width: 50%;
 padding: 20px;
 border-radius: 20px;
@@ -65,6 +65,13 @@ background-color: rgba(255,255,255,0.7);
 backdrop-filter: blur(20px);
 box-shadow: 0px 4px 20px rgb(0,0,0,0.3);
 font-family: Inter;
+padding-top: 50px;
+margin-bottom: 20px;
+}
+
+
+#step2{
+    margin-top: 100px;
 }
 h3{
     font-size: 30px;
@@ -91,7 +98,8 @@ font-family: Inter;
 .psw{
     margin-left: -60%;
 }
-input{
+
+.signup-container input{
     width: 70%;
     padding: 10px;
     border-radius: 10px;
@@ -139,6 +147,14 @@ font-weight: 100;
     display: flex;
     position: absolute;
     margin-top: 100px;
+}
+#edit{
+    display: flex;
+   position: absolute;
+ margin-top: 62%;
+ margin-right: -62%;
+ background-color: white;
+ border-radius: 50%;
 }
 
 @media (max-width:780px){
@@ -198,16 +214,16 @@ nav{
     margin-bottom: 20px;
 }
 .signup-container{
-    height: 70vh;
+   height: 110vh;
 }
 }
 
 @media (max-width:430px){
 .logo{
-    margin-top: -3%;
+    margin-top: -1%;
 }
 #getstarted{
-    top: 4px;
+    top: 12px;
 }
 }
 
@@ -216,5 +232,3 @@ h3{
     font-size: 20px;
 }
 }
-
-
