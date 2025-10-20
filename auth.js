@@ -2,9 +2,9 @@
 signing them in*/
 import { auth, db } from "./firebaseConfig.js"
 import {createUserWithEmailAndPassword, signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/12.3.0/firebase-auth.js"
-import {set, ref} from "https://www.gstatic.com/firebasejs/12.3.0/firebase-database.js"
+import {set, push, ref} from "https://www.gstatic.com/firebasejs/12.3.0/firebase-database.js"
 
-export async function signUpUser(username, email, password) {
+export async function signUpUser(username,dob , profilepicimage , city , phoneno, email, password) {
    
     const successMessage = document.getElementById("successful-su")
     successMessage.innerHTML = "Signing up..."
@@ -18,12 +18,23 @@ export async function signUpUser(username, email, password) {
      await set(ref(db, "/users" + user.uid),{
 Email: email,
 Username:username,
+Userid: user.uid,
+ProfilepicSrc: profilepicimage,
+Dateofbirth: dob,
+City : city
      })
-     successMessage.style.transform="translate(25px, 0px)"
+     
+await push(ref(db, '/totalusers'),{
+ProfilepicSrc: profilepicimage,
+Phoneno : phoneno,
+Username:username,
+Email: email,
+JoinedAt : new Date().toLocaleDateString('en-CA')
+})
+
+
       successMessage.innerHTML = "Signed up!. Redirecting..."
      successMessage.style.display="block"
-     successMessage.style.color="green"
-alert("Signed up")
      window.location.href="signin.html"     
    } catch (error) {
     console.error(error);
@@ -31,25 +42,25 @@ alert("Signed up")
    switch(error.code){
     case "auth/email-already-in-use":
     successMessage.innerHTML="Email has already been used"
-    successMessage.style.transform="translate(25px, -20px)"
+    successMessage.style.transform="translate(0px, -20px)"
    
     break;
 
     case 'auth/invalid email':
       successMessage.innerHTML="Invalid email"
-      successMessage.style.transform="translate(10px, -20px)"
+      successMessage.style.transform="translate(0px, -20px)"
    
       break
 
       case error:
         successMessage.innerHTML="Please try again"
-        successMessage.style.transform="translate(18px, -20px)"
+        successMessage.style.transform="translate(0px, -20px)"
    
    }
 
   
    successMessage.style.display="block"
-   successMessage.style.color="red"
+   successMessage.style.transform="translate(0px, -20px)"
    
    }
 }
@@ -66,17 +77,11 @@ try {
  const userCredentials = await signInWithEmailAndPassword(auth, email, password)
 
 signinSuccess.innerHTML="You're in!!"
-signinSuccess.style.color="green"
-window.location.href="index.html"
+window.location.href="nuvio.html"
 
 } catch (error) {
-
-    signinSuccess.style.color="red"
 signinSuccess.innerHTML="Failed to signin."
 signinSuccess.style.marginLeft="-55%"
 }
 }
-
-
-
 
