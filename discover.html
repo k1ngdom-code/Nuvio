@@ -241,10 +241,10 @@ window.addEventListener("load", async () => {
      loader.style.display="none"
      if(snapshot.exists()){
          const members= snapshot.val()
- const backupimage= "user.png"
+
       Object.values(members).forEach(member =>{
         const li = document.createElement("li")
-       let image= backupimage
+       let image= member.ProfilepicSrc || 'user.png'
           li.innerHTML=`
         <div class="user">
                 <img src=${image} width="30px" style="object-fit:cover" class="profilePic">
@@ -283,6 +283,7 @@ toppers.forEach(topper =>{
 
 </body>
 </html>
+
 
 
 
