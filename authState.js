@@ -12,12 +12,13 @@ onAuthStateChanged(auth, async (user) => {
     if (user) {
         try {
             const snapshot = await get(ref(db, '/users' + user.uid))
+            const backupimage= localStorage.getItem("profilepic")
             if (snapshot.exists()) {
                 const userData = snapshot.val()
                 username.innerHTML = userData.Username
                 userid.innerHTML = userData.Userid 
                 useremail.innerHTML= userData.Email
-                profilepicture.src = userData.ProfilepicSrc
+                profilepicture.src = userData.ProfilepicSrc  || backupimage || "user.png"
             } else {
                 username.innerHTML = "undefined"
                  userid.innerHTML = "undefined"
@@ -43,3 +44,4 @@ logoutbtn.addEventListener("click", async ()=>{
         cosole.error(error)
     }
 })
+
