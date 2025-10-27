@@ -1,251 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Community</title>
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Manrope:wght@200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="profiles.css">
- <link rel="stylesheet" href="discover.css">
- <style>
-     html,body{
-        background: linear-gradient(135deg, #cabcbc 0%, #e4e8f0 100%);
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Audiowide&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Manrope:wght@200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="profiles.css">
+    <link rel="stylesheet" href="discover.css">
+    <style>
+        html,
+        body {
+            background: linear-gradient(135deg, #cabcbc 0%, #e4e8f0 100%);
 
-    }
+        }
 
-    .profileinfo{
-   width: 13%;
-   display: flex;
-   flex-direction: column;
-   position: absolute;
-   justify-content: center;
-   height: fit-content;
-   border: 1px solid rgba(255, 255, 255, 0.3);
-   right: 14%;
-   z-index:1;
-   top: 8%;
-border-radius: 10px;
-background-color: whitesmoke;
-box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
-padding: 5px;
-transition: 0.2s ease;
-height: 5vh;
-font-size: 14px;
-scale: 0;
-}
+        .profileinfo {
+            width: 13%;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            justify-content: center;
+            height: fit-content;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            right: 14%;
+            z-index: 1;
+            top: 8%;
+            border-radius: 10px;
+            background-color: whitesmoke;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+            padding: 5px;
+            transition: 0.2s ease;
+            height: 5vh;
+            font-size: 14px;
+            scale: 0;
+        }
 
-#img{
-    transform: translate(0px, -13px);
-}
-#usernameinfo{
-    transform: translate(0px,15px);
-}
-@media (max-width:780px){
-     .profileinfo{
-        width: 18%;
-        right:1%;
-        font-size:13px;
-       }
-}
+        #img {
+            transform: translate(0px, -13px);
+        }
 
-@media (max-width:480px){
-    .profileinfo{
-        width: fit-content;
-        right:4%;
-        font-size:13px;
-        height:3vh;
-        top: 8%;
-       }
-}
+        #usernameinfo {
+            transform: translate(0px, 15px);
+        }
 
+        @media (max-width:780px) {
+            .profileinfo {
+                width: 18%;
+                right: 1%;
+                font-size: 13px;
+            }
+        }
 
- </style>
- <style>
-    .loader {
-  width: 40px;
-  aspect-ratio: 1;
-  --_g: no-repeat radial-gradient(circle closest-side,#000 90%,#0000);
-  background: 
-    var(--_g) 0    0,
-    var(--_g) 0    100%,
-    var(--_g) 100% 100%;
-  background-size: 40% 40%;
-  animation:l11 1s infinite linear;
-}
-@keyframes l11 {
-    25% {background-position:100% 0   ,0 100%,100% 100%}
-    50% {background-position:100% 0   ,0 0   ,100% 100%}
-    75% {background-position:100% 0   ,0 0   ,0    100%}
-    100%{background-position:100% 100%,0 0   ,0    100%}
-}
- </style>
+        @media (max-width:480px) {
+            .profileinfo {
+                width: fit-content;
+                right: 4%;
+                font-size: 13px;
+                height: 3vh;
+                top: 8%;
+            }
+        }
+    </style>
+    <style>
+        .loader {
+            width: 40px;
+            aspect-ratio: 1;
+            --_g: no-repeat radial-gradient(circle closest-side, #000 90%, #0000);
+            background:
+                var(--_g) 0 0,
+                var(--_g) 0 100%,
+                var(--_g) 100% 100%;
+            background-size: 40% 40%;
+            animation: l11 1s infinite linear;
+        }
 
- <link rel="stylesheet" href="nav.css">
+        @keyframes l11 {
+            25% {
+                background-position: 100% 0, 0 100%, 100% 100%
+            }
+
+            50% {
+                background-position: 100% 0, 0 0, 100% 100%
+            }
+
+            75% {
+                background-position: 100% 0, 0 0, 0 100%
+            }
+
+            100% {
+                background-position: 100% 100%, 0 0, 0 100%
+            }
+        }
+    </style>
+
+    <link rel="stylesheet" href="nav.css">
 </head>
+
 <body>
-    
-<!--Navigation bar-->
-      <!--Navigation bar-->
-     <div class="navbox">
+
+    <!--Navigation bar-->
+    <!--Navigation bar-->
+    <div class="navbox">
         <nav class="navbar">
             <div class="logo">
                 <h4>Nuvio</h4>
             </div>
             <ul id="navlist">
                 <li onclick="window.location.href='index.html'">Home<span><img src="home.png" width="20px"></span></li>
-                <li onclick="window.location.href='post.html'">Create<span><img src="addition.png" width="20px"></span> </li>
-                <li onclick="window.location.href='yourposts.html'">Posts<span><img src="list.png" width="20px"></span></li>
-            <li onclick="window.location.href='discover.html'><span><img src="people.png" width="20px"></span></li>    
+                <li onclick="window.location.href='post.html'">Create<span><img src="addition.png" width="20px"></span>
+                </li>
+                <li onclick="window.location.href='yourposts.html'">Posts<span><img src="list.png" width="20px"></span>
+                </li>
+                <li onclick="window.location.href='discover.html'"><span><img src=" people.png" width="20px"></span></li>
             </ul>
         </nav>
 
     </div>
-    
-<div class="usercard" style="font-family:Inter">
-     <img src="user.png" width="30px" class="profilePic" id="profilepicture">
-           <p id="username" style="font-size:17px">undefined</p>
-          <p>UserId: <span id="userid" style="font-size:17px">undefined</span>
-            <p>Email: <span id="useremail" style="font-size:17px">undefined</span></p>
-            <button id="img" style="color: red;">Log out<img src="logout.png" style="transform: translate(0px, 3px);" width="15px"></button> 
-</div>
+
+    <div class="usercard" style="font-family:Inter">
+        <img src="user.png" width="30px" class="profilePic" id="profilepicture">
+        <p id="username" style="font-size:17px">undefined</p>
+        <p>UserId: <span id="userid" style="font-size:17px">undefined</span>
+        <p>Email: <span id="useremail" style="font-size:17px">undefined</span></p>
+        <button id="img" style="color: red;">Log out<img src="logout.png" style="transform: translate(0px, 3px);"
+                width="15px"></button>
+    </div>
 
 
-<h3 class="one">Our Users</h3>
-<p class="note"><span>Note:</span> Displayed profiles are readonly.</p>
-<a href="termsanconditions.html">Learn how it works.</a>
+    <h3 class="one">Our Users</h3>
+    <p class="note"><span>Note:</span> Displayed profiles are readonly.</p>
+    <a href="termsanconditions.html">Learn how it works.</a>
 
-<div class="firstmembers" >
-    <h3>Top Users</h3>
-    <ul id="topuserlist">
-        <li>
-            <div class="user">
-                <img src="user.png" width="30px" class="profilePic">
-                <p class="name">Users name here</p>
-                <p class="email">okohm256@gmail.com</p>
-                <button class="contact">Contact <img src="phone-call.png" width="20px"></button>
-            </div>
-        </li>
-        <li>
-            <div class="user">
-                <img src="user.png" width="30px" class="profilePic">
-                <p class="name">Users name here</p>
-                <p class="email">okohm256@gmail.com</p>
-                <button class="contact">Contact<img src="phone-call.png" width="20px"></button>
-            </div>
-        </li>
-        <li>
-            <div class="user">
-                <img src="user.png" width="30px" class="profilePic">
-                <p class="name">Users name here</p>
-                <p class="email">okohm256@gmail.com</p>
-                <button class="contact">Contact<img src="phone-call.png" width="20px"></button>
-            </div>
-        </li>
-        <li>
-            <div class="user">
-                <img src="user.png" width="30px" class="profilePic">
-                <p class="name">Users name here</p>
-                <p class="email">okohm256@gmail.com</p>
-                <button class="contact">Contact<img src="phone-call.png" width="20px"></button>
-            </div>
-        </li>
-        <li>
-            <div class="user">
-                <img src="user.png" width="30px" class="profilePic">
-                <p class="name">Users name here</p>
-                <p class="email">okohm256@gmail.com</p>
-                <button class="contact">Contact<img src="phone-call.png" width="20px"></button>
-            </div>
-        </li>
-    </ul>
-</div>
+    <div class="firstmembers">
+        <h3>Top Users</h3>
+        <ul id="topuserlist">
+            <li>
+                <div class="user">
+                    <img src="user.png" width="30px" class="profilePic">
+                    <p class="name">Users name here</p>
+                    <p class="email">okohm256@gmail.com</p>
+                    <button class="contact">Contact <img src="phone-call.png" width="20px"></button>
+                </div>
+            </li>
+            <li>
+                <div class="user">
+                    <img src="user.png" width="30px" class="profilePic">
+                    <p class="name">Users name here</p>
+                    <p class="email">okohm256@gmail.com</p>
+                    <button class="contact">Contact<img src="phone-call.png" width="20px"></button>
+                </div>
+            </li>
+            <li>
+                <div class="user">
+                    <img src="user.png" width="30px" class="profilePic">
+                    <p class="name">Users name here</p>
+                    <p class="email">okohm256@gmail.com</p>
+                    <button class="contact">Contact<img src="phone-call.png" width="20px"></button>
+                </div>
+            </li>
+            <li>
+                <div class="user">
+                    <img src="user.png" width="30px" class="profilePic">
+                    <p class="name">Users name here</p>
+                    <p class="email">okohm256@gmail.com</p>
+                    <button class="contact">Contact<img src="phone-call.png" width="20px"></button>
+                </div>
+            </li>
+            <li>
+                <div class="user">
+                    <img src="user.png" width="30px" class="profilePic">
+                    <p class="name">Users name here</p>
+                    <p class="email">okohm256@gmail.com</p>
+                    <button class="contact">Contact<img src="phone-call.png" width="20px"></button>
+                </div>
+            </li>
+        </ul>
+    </div>
 
 
 
-<div class="othermembers">
-    <h3>Get Connected</h3>
-    <div id="loader" style="display: none;"><div class="loader"></div></div>
-    <ul id="otheruserslist">
-        <li>
-            <div class="user">
-                <img src="user.png" width="30px" class="profilePic">
-                <p class="name">Users name here</p>
-                <p class="email">okohm256@gmail.com</p>
-                <button class="contact"><a href="https://wa.me/" style="text-decoration: none; color: white;">Contact</a><img src="phone-call.png" width="20px"></button>
-            </div>
-        </li>
-        <li>
-            <div class="user">
-                <img src="user.png" width="30px" class="profilePic">
-                <p class="name">Users name here</p>
-                <p class="email">okohm256@gmail.com</p>
-                <button class="contact">Contact<img src="phone-call.png" width="20px"></button>
-            </div>
-        </li>
-        <li>
-            <div class="user">
-                <img src="user.png" width="30px" class="profilePic">
-                <p class="name">Users name here</p>
-                <p class="email">okohm256@gmail.com</p>
-                <button class="contact">Contact<img src="phone-call.png" width="20px"></button>
-            </div>
-        </li>
- <li>
-            <div class="user">
-                <img src="user.png" width="30px" class="profilePic">
-                <p class="name">Users name here</p>
-                <p class="email">okohm256@gmail.com</p>
-                <button class="contact">Contact<img src="phone-call.png" width="20px"></button>
-            </div>
-        </li>
-         <li>
-            <div class="user">
-                <img src="user.png" width="30px" class="profilePic">
-                <p class="name">Users name here</p>
-                <p class="email">okohm256@gmail.com</p>
-                <button class="contact">Contact<img src="phone-call.png" width="20px"></button>
-            </div>
-        </li>
+    <div class="othermembers">
+        <h3>Get Connected</h3>
+        <div id="loader" style="display: none;">
+            <div class="loader"></div>
+        </div>
+        <ul id="otheruserslist">
+            <li>
+                <div class="user">
+                    <img src="user.png" width="30px" class="profilePic">
+                    <p class="name">Users name here</p>
+                    <p class="email">okohm256@gmail.com</p>
+                    <button class="contact"><a href="https://wa.me/"
+                            style="text-decoration: none; color: white;">Contact</a><img src="phone-call.png"
+                            width="20px"></button>
+                </div>
+            </li>
+            <li>
+                <div class="user">
+                    <img src="user.png" width="30px" class="profilePic">
+                    <p class="name">Users name here</p>
+                    <p class="email">okohm256@gmail.com</p>
+                    <button class="contact">Contact<img src="phone-call.png" width="20px"></button>
+                </div>
+            </li>
+            <li>
+                <div class="user">
+                    <img src="user.png" width="30px" class="profilePic">
+                    <p class="name">Users name here</p>
+                    <p class="email">okohm256@gmail.com</p>
+                    <button class="contact">Contact<img src="phone-call.png" width="20px"></button>
+                </div>
+            </li>
+            <li>
+                <div class="user">
+                    <img src="user.png" width="30px" class="profilePic">
+                    <p class="name">Users name here</p>
+                    <p class="email">okohm256@gmail.com</p>
+                    <button class="contact">Contact<img src="phone-call.png" width="20px"></button>
+                </div>
+            </li>
+            <li>
+                <div class="user">
+                    <img src="user.png" width="30px" class="profilePic">
+                    <p class="name">Users name here</p>
+                    <p class="email">okohm256@gmail.com</p>
+                    <button class="contact">Contact<img src="phone-call.png" width="20px"></button>
+                </div>
+            </li>
 
-        <li>
-            <div class="user">
-                <img src="user.png" width="30px" class="profilePic">
-                <p class="name">Users name here</p>
-                <p class="email">okohm256@gmail.com</p>
-                <button class="contact">Contact<img src="phone-call.png" width="20px"></button>
-            </div>
-        </li>
-        <li>
-            <div class="user">
-                <img src="user.png" width="30px" class="profilePic">
-                <p class="name">Users name here</p>
-                <p class="email">okohm256@gmail.com</p>
-                <button class="contact">Contact</button>
-            </div>
-        </li>
-    </ul>
-</div>
+            <li>
+                <div class="user">
+                    <img src="user.png" width="30px" class="profilePic">
+                    <p class="name">Users name here</p>
+                    <p class="email">okohm256@gmail.com</p>
+                    <button class="contact">Contact<img src="phone-call.png" width="20px"></button>
+                </div>
+            </li>
+            <li>
+                <div class="user">
+                    <img src="user.png" width="30px" class="profilePic">
+                    <p class="name">Users name here</p>
+                    <p class="email">okohm256@gmail.com</p>
+                    <button class="contact">Contact</button>
+                </div>
+            </li>
+        </ul>
+    </div>
 
-<script type="module">
-import { get, ref } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-database.js";
-import { app, db } from "./firebaseConfig.js" 
- const displayUsers= document.getElementById("otheruserslist")
-const loader= document.getElementById("loader")
+    <script type="module">
+        import { get, ref } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-database.js";
+        import { app, db } from "./firebaseConfig.js"
+        const displayUsers = document.getElementById("otheruserslist")
+        const loader = document.getElementById("loader")
 
-window.addEventListener("load", async () => {
-  loader.style.display="block"
-    try {
-     const snapshot = await get(ref(db, '/totalusers'))
-     loader.style.display="none"
-     if(snapshot.exists()){
-         const members= snapshot.val()
+        window.addEventListener("load", async () => {
+            loader.style.display = "block"
+            try {
+                const snapshot = await get(ref(db, '/totalusers'))
+                loader.style.display = "none"
+                if (snapshot.exists()) {
+                    const members = snapshot.val()
 
-      Object.values(members).forEach(member =>{
-        const li = document.createElement("li")
-       let image= member.ProfilepicSrc || 'user.png'
-          li.innerHTML=`
+                    Object.values(members).forEach(member => {
+                        const li = document.createElement("li")
+                        let image = member.ProfilepicSrc || 'user.png'
+                        li.innerHTML = `
         <div class="user">
                 <img src=${image} width="30px" style="object-fit:cover" class="profilePic">
                 <p class="name">${member.Username}</p>
@@ -253,56 +277,20 @@ window.addEventListener("load", async () => {
                <button class="contact"><a href="https://wa.me/${member.Phoneno}" style="text-decoration: none; color: white;">Contact</a><img src="phone-call.png" width="20px"></button>
                 </div>
         `
-        displayUsers.appendChild(li)
-      })
+                        displayUsers.appendChild(li)
+                    })
 
-const topusers= document.getElementById("topuserlist")
-const allusers= Object.values(members)
-const toppers= allusers.slice(5,10)
 
-toppers.forEach(topper =>{
-    const li= document.createElement("li")
-    li.innerHTML=`
-    <div class="user">
-                <img src="${topper.ProfilepicSrc}" width="30px" class="profilePic">
-                <p class="name">${topper.Username}</p>
-                <p class="email">${topper.Email}</p>
-                <button class="contact"><a href="https://wa.me/${topper.Phoneno}" style="text-decoration: none; color: white;">Contact</a><img src="phone-call.png" width="20px"></button>
-            </div>
-    `
-    topusers.appendChild(li)
-})
-     }
-   } catch (error) {
-    console.error(error)
-   }
-})
-</script>
-<script type="module" src="authState.js"></script>
-
+                }
+                else {
+                    null
+                }
+            } catch (error) {
+                console.error(error)
+            }
+        })
+    </script>
 
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
