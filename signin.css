@@ -223,10 +223,10 @@ nav{
     font-size: 135x;
 }
     .usernm{
-    margin-left: -60%;
+    margin-left: -50%;
 }
 .psw{
-    margin-left: -60%;
+    margin-left: -50%;
 }
 }
 
@@ -235,5 +235,6 @@ h3{
     font-size: 20px;
 }
 }
+
 
 
