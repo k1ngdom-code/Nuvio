@@ -120,7 +120,7 @@
                 <li onclick="window.location.href='index.html'">Home<span><img src="home.png" width="20px"></span></li>
                 <li onclick="window.location.href='post.html'">Create<span><img src="editing.png" width="20px"></span> </li>
                 <li onclick="window.location.href='yourposts.html'">Posts<span><img src="list.png" width="20px"></span></li>
-            <li  onclick="window.location.href='discover.html' id="show"><span><img src="people.png" width="20px"></span></li>    
+            <li onclick="window.location.href='discover.html'" id="show"><span><img src="people.png" width="20px"></span></li>    
             </ul>
         </nav>
 
@@ -173,12 +173,18 @@
             <div class="cardtext">
                   <img class="userimage" src="user.png" width="20px">
                 <h3>Post title</h3>
-                <p>post content ppppppppppppppppppppppppppppp</p>
+                <p>post content pppppppppppppppppppppppppp</p>
             </div>
             <div class="timestamp">
                 <span id="dot"></span>
                 <p2><span class="time">1</span> mins ago</p2>
             </div>
+            <ul id="actions">
+                <li><img src="visible.png" width="20px"></li>
+                <li><img src="comment.png" width="20px"></li>
+                <li><img src="wishlist.png" width="20px"></li>
+                <li><img src="share.png" width="20px"></li>
+            </ul>
         </div>
 
         <div class="card">
@@ -314,10 +320,17 @@ try {
                 Object.values(data).forEach(post => {
                     const postdiv = document.createElement("div")
                     postdiv.classList = 'card'
+                    
+                    let postedimage = ""
+                    if(post.imagebase64){
+                        postedimage= post.imagebase64
+                    }else{
+                        postedimage = "camera.png"
+                    }
                     postdiv.innerHTML = `
-            <img class="userpost" src="${post.imagebase64} " width="400px">
+            <img class="userpost" src="${postedimage}" width="400px">
             <div class="cardtext">
-                  <img class="userimage" src="user.png" width="20px">
+                  <img class="userimage" src="${post.userimage}" width="20px" style="object-fit:cover">
                 <h3> ${post.usernameInput}</h3>
                 <p> ${post.postContentInput}</p>
             </div>
@@ -325,7 +338,12 @@ try {
                 <span id="dot"></span>
                 <p2><span class="time">${post.createdAt}</span></p2>
             </div>
-        
+        <ul id="actions">
+                <li><img src="visible.png" width="20px"></li>
+                <li><img src="comment.png" width="20px"></li>
+                <li><img src="wishlist.png" width="20px"></li>
+                <li><img src="share.png" width="20px"></li>
+            </ul>
            
             `
                     postsList.appendChild(postdiv)
@@ -344,5 +362,4 @@ try {
 </body>
 
 </html>
-
 
