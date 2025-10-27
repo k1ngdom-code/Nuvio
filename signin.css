@@ -215,6 +215,19 @@ nav{
 #getstarted{
     top: 12px;
 }
+     input{
+          width:95%
+     }
+     label{
+    margin-left: -55%;
+    font-size: 135x;
+}
+    .usernm{
+    margin-left: -60%;
+}
+.psw{
+    margin-left: -60%;
+}
 }
 
 @media (max-width:390px){
@@ -222,4 +235,5 @@ h3{
     font-size: 20px;
 }
 }
+
 
