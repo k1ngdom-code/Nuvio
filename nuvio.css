@@ -131,7 +131,7 @@ opacity: 0.4
   transition: 0.3s ease;
   transform-style: preserve-3d;
   background-color: whitesmoke;
-padding: 0px;
+padding: 10px;
 box-shadow: 0px 3px 20px rgba(0,0,0,0.1)
 }
 
@@ -171,21 +171,21 @@ box-shadow: 0px 3px 20px rgba(0,0,0,0.1)
 
 
 .cardtext h3{
-    font-size: 15px;
+    font-size: 17px;
      width: fit-content;
     padding: 2px;;
     border-radius: 7px;
     color: black;
-    transform: translate(30%,35%);
+    transform: translate(48%,20%);
     color: purple;
 }
 .cardtext p{
-    font-size: 14px;
+    font-size: 15px;
     
 }
 .container{
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(4,1fr);
   gap: 70px;
  margin-top: 150px;
   //background:rgba(255,255,255,0.3);
@@ -204,25 +204,29 @@ box-shadow: 0px 3px 20px rgba(0,0,0,0.1)
   transform: translateZ(10px) scale(1.05);
  
 }
-
+.userpost{
+    border-radius: 10px;
+}
 
 .userimage{
-    width: 20px;
+    width: 10%;
     position:absolute;
     display: flex;
-    transform: translate(-20%,120%);
+    transform: translate(-10%,55%);
+    z-index: 1;
 }
 
 .timestamp{
   position: relative;
- margin-top: 30%;
-  margin-left: 0px;
+ margin-top: 10%;
+  margin-left: 10%;
    width: 70px;
   font-size: 13px;
   border-radius: 10px;
   transform: scale(0.8);
    font-family: Lato;
   color: rgb(95, 93, 93);
+  z-index: -1;
 }
 
 #dot{
@@ -233,9 +237,20 @@ box-shadow: 0px 3px 20px rgba(0,0,0,0.1)
   border-radius: 50%;
   margin-left: -15px;
   font-size: 1px;
-  margin-top: 3px
-}
+  margin-top: 3px;
 
+}
+#actions{
+    display: flex;
+ justify-content:center;
+    align-items: center;
+}
+#actions li{
+    display: flex;
+    margin-right: 20%;
+    transform: translate(0%,300%);
+    opacity: 0.5;
+}
 .navbar{
     border: 1px solid;
     width: 70%;
@@ -626,13 +641,13 @@ scale: 0;
        }
     .card{
         width: 100%;
-        height: 100%;
+        height: 110%;
         font-size: 15px;
         font-family: Inter;
     }
     .container{
       width: 85%;
-        gap:40px;
+        gap:70px;
         scale: 0.95;
         margin-top: 35px;
         justify-content: center;
@@ -680,6 +695,21 @@ scale: 0;
        #userIcon{
         width: 15px;
        }
+
+
+       .cardtext h3{
+         transform: translate(58%,40%);
+   
+       }
+.cardtext p{
+     transform: translate(0%,120%);
+   
+}
+#actions li{
+      margin-right: 25%;
+    transform: translate(100%,300%);
+      
+}
    }
 
 @media (max-width:430px){
@@ -715,6 +745,7 @@ display: none;
     .header h2{
        font-size: 14.5px;
     }
+    
 }
 @media (max-width:390px){
     .container{
@@ -746,6 +777,31 @@ display: none;
        .header h1{
            font-size: 25px
        }
+
+        .cardtext h3{
+         transform: translate(65%,40%);
+   
+       }
+.cardtext p{
+     transform: translate(0%,80%);
+   
+}
+#actions li{
+      margin-right: 25%;
+    transform: translate(80%,250%) scale(0.9); 
+}
+.timestamp{
+    margin-top: 12%;
+    margin-left: 13%;
+}
+
+.userimage{
+     transform: translate(10%,55%);
+   width: 12%;
+}
+.card{
+    padding-bottom: 5%;
+}
 }
 @media (max-width:380px){
     
@@ -764,12 +820,19 @@ display: none;
 }
     .container{
         width: 80%;
+        margin-left: -1%;
     }
     .card{
         height: 330px;
     }
    .timestamp{
     margin-bottom: 20px;
+    margin-left: 15%;
+    margin-top: 14%;
+   }
+   #actions li{
+transform: translate(80%,220%) scale(0.9); 
+
    }
 }
 
@@ -781,4 +844,9 @@ display: none;
    margin-right: 110%;
     max-width: 100px;
 }
+}
+@media (max-width:360px){
+    .userimage{
+        width: 13%;
+    }
 }
