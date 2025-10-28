@@ -77,12 +77,13 @@ try {
  const userCredentials = await signInWithEmailAndPassword(auth, email, password)
 
 signinSuccess.innerHTML="You're in!!"
-window.location.href="nuvio.html"
+window.location.href="index.html"
 
 } catch (error) {
 signinSuccess.innerHTML="Failed to signin."
 signinSuccess.style.marginLeft="-55%"
 }
 }
+
 
 
